@@ -111,7 +111,14 @@ export default function Home() {
     <Page>
       <NavigationContainer>
         <LogoContainer>
-          <Image src={ZanLogo} fill={true} alt={'Zan logo'} priority={true}/>
+          <Image 
+            src={ZanLogo} 
+            fill={true} 
+            alt={'Zan logo'} 
+            priority={true} 
+            sizes="(max-width: 768px) 50vw,
+              (max-width: 1200px) 20vw"
+            />
         </LogoContainer>
       </NavigationContainer>
       <ContentContainer>
