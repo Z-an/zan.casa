@@ -2,15 +2,16 @@ import styled from 'styled-components';
 import Image from 'next/image'
 import ZanLogo from 'public/assets/zan.png';
 
-const HomeContainer = styled.div`
+const Page = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   background: transparent;
   max-width: 46rem;
   width: 100%;
   margin: auto;
   gap: 4rem;
+  min-height: 100vh;
 `;
 
 const ContentContainer = styled.div`
@@ -19,7 +20,7 @@ const ContentContainer = styled.div`
   width: 100%;
   gap: 3rem;
   padding: 0 3rem;
-  margin: auto;
+    top: 50%;
   @media screen and (max-width: 480px){
     gap: 3rem;
     padding: 0 2rem;
@@ -30,7 +31,10 @@ const NavigationContainer = styled.div`
   width: fit-content;
   height: fit-content;
   position: relative;
-  margin-top: 4rem;
+  padding: 6rem 0rem 0 3rem;
+  @media screen and (max-width: 480px){
+    padding: 2rem 0rem 0 2rem;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -51,9 +55,9 @@ const LinksSection = styled.div`
   flex-direction: row;
   justify-content: space-between;
   overflow: scroll;
-  padding: 0 3rem;
+  padding: 0 3rem 6rem;
   @media screen and (max-width: 480px){
-    padding: 0 2rem;
+    padding: 0 2rem 6rem;
   }
 `;
 
@@ -73,11 +77,12 @@ const Subheading = styled.h3`
 `;
 
 const Headline = styled.h1`
-  font-size: 5.5rem;
+  font-size: 4rem;
   line-height: 100%;
   font-weight: 400;
   @media screen and (max-width: 480px){
-    font-size: 5rem;
+    font-size: 4rem;
+    text-indent: 1.3125rem;
   }
 `;
 
@@ -97,29 +102,28 @@ const HeadlineContainer = styled.div`
   margin-top: 2rem;
   margin-bottom: 1rem;
   @media screen and (max-width: 480px){
-    margin-left: 1.125rem;
     margin-top: 1rem;
   }
 `
 
 export default function Home() {
   return (
-    <HomeContainer>
-      <ContentContainer>
+    <Page>
       <NavigationContainer>
         <LogoContainer>
           <Image src={ZanLogo} fill={true} alt={'Zan logo'} priority={true}/>
         </LogoContainer>
       </NavigationContainer>
+      <ContentContainer>
       <TextContainer>
         <HeadlineContainer>
           <Headline><HeadlineAccent>Z</HeadlineAccent>an Thomson</Headline>
         </HeadlineContainer>
-        <p>Productively unproductive; busy surfing curiosity.</p>
-        <p>Playing with design, code, and meticulously crafted software. Building a canvas for my work, experiments, thoughts.</p>
+        <p>Surfing curiosity. Playing with design, code, and meticulously crafted software. This is a canvas for my work, experiments, thoughts.</p>
         <p>Currently, <strong>Product Lead at Liven.</strong> Building towards an independent practice. </p>
       </TextContainer>
       </ContentContainer>
+
       <LinksSection>
           <LinksContainer>
             <Subheading>Building</Subheading>
@@ -137,6 +141,6 @@ export default function Home() {
             <a>Article 1</a>
           </LinksContainer>
         </LinksSection>
-    </HomeContainer>
+    </Page>
   )
 }
