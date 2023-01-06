@@ -88,12 +88,20 @@ const Headline = styled.h1`
 
 const HeadlineAccent = styled.strong`
   font-family: "Snell";
-  font-size: 1.4em;
+  font-size: 1.45em;
   letter-spacing: -0.2em;
   font-weight: 500;
   margin-left: 1.125rem;
   @media screen and (max-width: 480px){
     margin-left: 0rem;
+  }
+`;
+
+const SubheadingAccent = styled(HeadlineAccent)`
+  margin-left: 0.375rem;
+  margin-right: -0.125rem;
+  @media screen and (max-width: 480px){
+    margin-left: 0.25rem;
   }
 `;
 
@@ -127,24 +135,24 @@ export default function Home() {
           <Headline><HeadlineAccent>Z</HeadlineAccent>an Thomson</Headline>
         </HeadlineContainer>
         <p>Surfing curiosity. Playing with design, code, and meticulously crafted software. This is a canvas for my work, experiments, thoughts.</p>
-        <p>Currently, <strong>Product Lead at Liven.</strong> Building towards an independent practice. </p>
+        <p>Currently: <strong>Product Lead at Liven.</strong> Building towards an independent practice. </p>
       </TextContainer>
       </ContentContainer>
 
       <LinksSection>
           <LinksContainer>
-            <Subheading>Building</Subheading>
+            <Subheading><SubheadingAccent>B</SubheadingAccent>uilding</Subheading>
             <a>Nomnie</a>
           </LinksContainer>
           <LinksContainer>
-            <Subheading>Exploring</Subheading>
+            <Subheading><SubheadingAccent>E</SubheadingAccent>xploring</Subheading>
             <a>Design Systems</a>
             <a>Brand Identity</a>
             <a>Type Design</a>
             <a>UI Engineering</a>
           </LinksContainer>
           <LinksContainer>
-            <Subheading>Writing</Subheading>
+            <Subheading><SubheadingAccent>W</SubheadingAccent>riting</Subheading>
             <a>Article 1</a>
           </LinksContainer>
         </LinksSection>
