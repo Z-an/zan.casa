@@ -70,7 +70,7 @@ const LinksContainer = styled.div`
 `;
 
 const Subheading = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   line-height: 133%;
   letter-spacing: 0em;
   font-family: "PPNeueMontreal-Regular";
@@ -141,18 +141,21 @@ export default function Home() {
 
       <LinksSection>
           <LinksContainer>
-            <Subheading><SubheadingAccent>B</SubheadingAccent>uilding</Subheading>
+            <Subheading>Building</Subheading>
+            <td/>
             <a>Nomnie</a>
           </LinksContainer>
           <LinksContainer>
-            <Subheading><SubheadingAccent>E</SubheadingAccent>xploring</Subheading>
+            <Subheading>Exploring</Subheading>
+            <td/>
             <a>Design Systems</a>
             <a>Brand Identity</a>
             <a>Type Design</a>
             <a>UI Engineering</a>
           </LinksContainer>
           <LinksContainer>
-            <Subheading><SubheadingAccent>W</SubheadingAccent>riting</Subheading>
+            <Subheading>Writing</Subheading>
+            <td/>
             <a>Article 1</a>
           </LinksContainer>
         </LinksSection>
