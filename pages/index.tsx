@@ -10,7 +10,6 @@ const Page = styled.div`
   max-width: 46rem;
   width: 100%;
   margin: auto;
-  gap: 4rem;
   min-height: 100vh;
 `;
 
@@ -32,6 +31,7 @@ const NavigationContainer = styled.div`
   height: fit-content;
   position: relative;
   padding: 6rem 0rem 0 3rem;
+  margin-bottom: 4rem;
   @media screen and (max-width: 480px){
     padding: 2rem 0rem 0 2rem;
   }
@@ -55,9 +55,9 @@ const LinksSection = styled.div`
   flex-direction: row;
   justify-content: space-between;
   overflow: scroll;
-  padding: 0 3rem 6rem;
+  padding: 4rem 3rem 6rem;
   @media screen and (max-width: 480px){
-    padding: 0 2rem 6rem;
+    padding: 3rem 2rem 6rem;
   }
 `;
 
