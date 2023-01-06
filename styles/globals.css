@@ -65,6 +65,12 @@ p strong {
   -moz-osx-font-smoothing: grayscale;
 }
 
+hr {
+  all: unset;
+  height: 0.25rem;
+  border-width: 0;
+}
+
 /*
 @media (prefers-color-scheme: dark) {
   html {

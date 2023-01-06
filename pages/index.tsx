@@ -142,12 +142,12 @@ export default function Home() {
       <LinksSection>
           <LinksContainer>
             <Subheading>Building</Subheading>
-            <td/>
+            <hr/>
             <a>Nomnie</a>
           </LinksContainer>
           <LinksContainer>
             <Subheading>Exploring</Subheading>
-            <td/>
+            <hr/>
             <a>Design Systems</a>
             <a>Brand Identity</a>
             <a>Type Design</a>
@@ -155,7 +155,7 @@ export default function Home() {
           </LinksContainer>
           <LinksContainer>
             <Subheading>Writing</Subheading>
-            <td/>
+            <hr/>
             <a>Article 1</a>
           </LinksContainer>
         </LinksSection>
