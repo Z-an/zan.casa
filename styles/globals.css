@@ -1,18 +1,67 @@
+@font-face {
+  font-family: "PPNeueMontreal-Regular";
+  src: url('../public/assets/fonts/PPNeueMontreal-Regular.otf');
+  weight: 400;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal-Light";
+  src: url('../public/assets/fonts/PPNeueMontreal-Light.otf');
+  weight: 300;
+}
+
+@font-face {
+  font-family: "Snell";
+  src: url('../public/assets/fonts/SnellBT-Regular.otf');
+}
+
+:root {
+  --text-low-contrast: #6F6E77;
+  --text-high-contrast: #1A1523;
+  --main-bg: #FDFCFD;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "PPNeueMontreal-Regular", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--main-bg);
+  color: var(--text-low-contrast);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "PPNeueMontreal-Light", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--text-high-contrast);
+  letter-spacing: -0.03em;
+  font-weight: 300;
+  margin: 0;
 }
 
 a {
+  font-size: 1.125rem;
   color: inherit;
   text-decoration: none;
 }
 
+p {
+  font-size: 1.125rem;
+  color: var(--text-low-contrast);
+  line-height: 150%;
+  font-weight: 400;
+}
+
+p strong {
+  color: var(--text-high-contrast);
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +73,12 @@ a {
     background: black;
   }
 }
+
+@media screen and (max-width: 480px){
+  p {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 1rem;
+  }
+};
