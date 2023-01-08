@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import './globals.css'
-import ZanLogo from 'public/assets/zan.png';
+import Zan from 'public/assets/svg/zan.svg';
 import styles from './page.module.css'
 import localFont from '@next/font/local'
 
@@ -14,14 +14,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.navigation}>
         <div className={styles.logoContainer}>
-          <Image 
-            src={ZanLogo} 
-            fill={true} 
-            alt={'Zan logo'} 
-            priority={true} 
-            sizes="(max-width: 768px) 50vw,
-              (max-width: 1200px) 20vw"
-            />
+          <Zan />
         </div>
       </div>
       <div className={styles.content}>
