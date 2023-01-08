@@ -1,7 +1,31 @@
+/* Colours assigned based on system defaults of user. */
+
 :root {
     --text-low-contrast: #6F6E77;
     --text-high-contrast: #1A1523;
     --main-bg: #FDFCFD;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-low-contrast: #A09FA6;
+        --text-high-contrast: #EDEDEF;
+        --main-bg: #101011;
+    }
+}
+
+/* These are themes set for explicit selection by the user */
+
+[data-theme="light"] {
+    --text-low-contrast: #6F6E77;
+    --text-high-contrast: #1A1523;
+    --main-bg: #FDFCFD;
+}
+
+[data-theme="dark"] {
+    --text-low-contrast: #A09FA6;
+    --text-high-contrast: #EDEDEF;
+    --main-bg: #101011;
 }
 
 @font-face {
