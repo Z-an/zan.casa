@@ -3,6 +3,7 @@ import './globals.css'
 import Zan from 'public/assets/svg/zan.svg';
 import styles from './page.module.css'
 import localFont from '@next/font/local'
+import { ThemeToggle } from '../components/themeToggle';
 
 const snellBold = localFont({
   src: "../public/assets/fonts/SnellBT-Bold.otf",
@@ -16,6 +17,7 @@ export default function Home() {
         <div className={styles.logoContainer}>
           <Zan />
         </div>
+        <ThemeToggle />
       </div>
       <div className={styles.content}>
       <div>
@@ -43,7 +45,7 @@ export default function Home() {
           <section>
             <h3>Writing</h3>
             <hr/>
-            <a>Article 1</a>
+            <a>Simple dynamic themes, with just css</a>
           </section>
         </div>
     </main>
