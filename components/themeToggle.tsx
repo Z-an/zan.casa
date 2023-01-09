@@ -1,32 +1,26 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./themeToggle.module.css";
 import { Sun, Moon, Monitor } from "phosphor-react";
 
-const changeTheme = (theme:string) => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme)
-}
-
 export const ThemeToggle: React.FC = () => {
-    const [theme, setTheme] = useState(localStorage.getItem('theme'));
-    console.log('updated theme:',theme)
-    const changeTheme = (theme:string) => {
-        setTheme(theme)
+    const [theme, setTheme] = useState('system');
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
         document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme)
-    }
+      }, [theme]);
 
     return (
         <div className={styles.themeContainer}>
-            <div className={`${styles.themeButton} ${(theme === 'light') && styles.highlighted}`} onClick={() => changeTheme('light')}>
-                <Sun size={24} weight={`${theme === 'light'? 'fill' : 'bold'}`}/>
+            <div className={`${styles.themeButton} ${(theme === 'light') && styles.highlighted}`} onClick={() => setTheme('light')}>
+                <Sun size={24} weight={`${theme === 'light'? 'fill' : 'regular'}`}/>
             </div>
-            <div className={`${styles.themeButton} ${(theme === 'dark') && styles.highlighted}`} onClick={(e) => changeTheme('dark')}>
-                <Moon size={24} weight={`${theme === 'dark'? 'fill' : 'bold'}`}/>
+            <div className={`${styles.themeButton} ${(theme === 'dark') && styles.highlighted}`} onClick={() => setTheme('dark')}>
+                <Moon size={24} weight={`${theme === 'dark'? 'fill' : 'regular'}`}/>
             </div>
-            <div className={`${styles.themeButton} ${(theme === 'system') && styles.highlighted}`} onClick={(e) => changeTheme('system')}>
-                <Monitor size={24} weight={`${theme === 'system'? 'fill' : 'bold'}`}/>
+            <div className={`${styles.themeButton} ${(theme === 'system') && styles.highlighted}`} onClick={() => setTheme('system')}>
+                <Monitor size={24} weight={`${theme === 'system'? 'fill' : 'regular'}`}/>
             </div>
         </div>
     )
