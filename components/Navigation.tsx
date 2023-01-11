@@ -1,7 +1,7 @@
 import styles from "./navigation.module.css";
 import Zan from 'public/assets/svg/zan.svg';
 import Link from "next/link";
-import { ThemeToggle } from './ThemeToggle';
+import { Theme } from './theme';
 
 export const Navigation: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ export const Navigation: React.FC = () => {
                     <Zan />
                 </div>
             </Link>
-            <ThemeToggle size={'20'}/>
+            <Theme size={'20'}/>
         </div>
     )
 }; 
