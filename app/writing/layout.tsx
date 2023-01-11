@@ -1,5 +1,6 @@
 import styles from './writing.module.css';
 import Link from 'next/link';
+import { Navigation } from '../../components/Navigation';
 
 export default async function Layout({
         children,
@@ -9,6 +10,7 @@ export default async function Layout({
 
     return (
         <div>
+            <Navigation />
         <main className={styles.main}>
             <div className={styles.leftHandPane}><Link href="/">← Index</Link></div>
             <div className={styles.content}>{children}</div>

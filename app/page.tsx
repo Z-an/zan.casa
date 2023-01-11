@@ -4,6 +4,7 @@ import Zan from 'public/assets/svg/zan.svg';
 import styles from './page.module.css'
 import localFont from '@next/font/local'
 import Link from 'next/link';
+import { Navigation } from '../components/Navigation'
 
 const snellBold = localFont({
   src: "../public/assets/fonts/SnellBT-Bold.otf",
@@ -13,6 +14,7 @@ const snellBold = localFont({
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Navigation />
       <div className={styles.content}>
         <div className={styles.bio}>
           <div>
