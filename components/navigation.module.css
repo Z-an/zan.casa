@@ -2,7 +2,7 @@
     width: fit-content;
     height: fit-content;
     position: relative;
-    padding: 6rem 3rem 0 3rem;
+    padding: 4rem 6rem;
     display: flex;
     flex-direction: row;
     align-items: top;
@@ -10,6 +10,9 @@
     width: 100%;
     top: 0;
     position: sticky;
+    max-width: 52rem;
+    margin: auto;
+    background: linear-gradient(180deg, var(--main-bg), transparent)
 }
 
 .logoContainer {
@@ -21,7 +24,7 @@
 
 @media screen and (max-width: 480px){
     .navigation {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     .logoContainer {
         height: 4rem;

@@ -4,6 +4,7 @@ import Zan from 'public/assets/svg/zan.svg';
 import styles from './page.module.css'
 import localFont from '@next/font/local'
 import { Navigation } from '../components/navigation/Navigation'
+import Link from 'next/link';
 
 const snellBold = localFont({
   src: "../public/assets/fonts/SnellBT-Bold.otf",
@@ -13,15 +14,13 @@ const snellBold = localFont({
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Navigation />
       <div className={styles.content}>
         <div className={styles.bio}>
           <div>
             <div className={styles.headline}>
-              {/*<h1><strong className={snellBold.className}>Z</strong>an Thomson</h1>-->*/}
               <h1>Zan Thomson</h1>
             </div>
-            <p>Surfing curiosity, learning by building. Playing with design, code, entrepeneurship, and meticulously crafted software.</p><p>Infrequently documenting thoughts, experiments.</p>
+            <p>Surfing curiosity, learning by building. Playing with design, code and meticulously crafted software.</p>
             <p></p>
             <p>Currently: <strong>Product Lead at Liven.</strong> Building towards an independent practice.</p>
           </div>
@@ -45,7 +44,7 @@ export default function Home() {
               <hr/>
               <a>Dynamic themes, with just css</a>
               <a>Design Systems for tiny teams</a>
-              <a>On "elegant" design</a>
+              <Link href="/writing">On "Elegant" Software</Link>
             </section>
           </div>
         </div>

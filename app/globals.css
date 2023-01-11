@@ -9,7 +9,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --text-low-contrast: hsl(247deg 15% 75%);
-        --text-high-contrast: hsl(240deg 6% 95%);
+        --text-high-contrast: hsl(240deg 6% 92%);
         --main-bg: #000000;
         --elevation-bg: #05050F;
     }
@@ -24,8 +24,8 @@
 }
 
 [data-theme="dark"] {
-    --text-low-contrast: hsl(247deg 15% 80%);
-    --text-high-contrast: hsl(240deg 6% 95%);
+    --text-low-contrast: hsl(247deg 15% 75%);
+    --text-high-contrast: hsl(240deg 6% 92%);
     --main-bg: #000000;
     --elevation-bg: #05050F;
 }
@@ -55,6 +55,7 @@ body {
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background: var(--main-bg);
     color: var(--text-low-contrast);
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5 {
@@ -70,14 +71,14 @@ a {
     color: inherit;
     text-decoration: none;
     color: var(--text-low-contrast);
-    font-size: 1rem;
+    font-size: 1.0625rem;
 }
 
 p {
     color: var(--text-low-contrast);
-    line-height: 150%;
+    line-height: 175%;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.0625rem;
 }
 
 p strong {
@@ -95,4 +96,20 @@ hr {
     all: unset;
     height: 0.25rem;
     border-width: 0;
+}
+
+article h1 {
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 480px){
+    article h1 {
+        font-size: 2rem;
+    }
+    a {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }

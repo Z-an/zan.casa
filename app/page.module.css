@@ -5,17 +5,15 @@
 
 .main {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    max-width: 46rem;
     width: 100%;
-    margin: auto;
-    min-height: 100vh;
+    margin: 0 auto 4rem;
 }
 
 .content {
-    margin-top: 6rem;
+    margin: 6rem auto 0;
     width: 100%;
+    max-width: 46rem;
 }
 
 .bio {
@@ -27,12 +25,16 @@
     top: 50%;
 }
 
+.bio p {
+    width: 87.5%;
+}
+
 .links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     overflow: scroll;
-    padding: 4rem 3rem 6rem;
+    padding: 2rem 3rem 0;
 }
 
 .links section {
@@ -56,7 +58,7 @@
 }
 
 .headline h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: 100%;
     font-weight: 400;
 }
@@ -70,11 +72,11 @@
 
 @media screen and (max-width: 480px){
     .content {
-        margin-top: 10rem;
+        margin-top: 12rem;
     }
     .bio {
         gap: 3rem;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
     .navigation {
         padding: 1.5rem;
@@ -84,10 +86,10 @@
         width: 8rem;
     }
     .links {
-        padding: 3rem 1.5rem 6rem;
+        padding: 1.5rem 1.5rem 6rem;
     }
     .headline h1 {
-        font-size: 3rem;
+        font-size: 4.5rem;
         /*text-indent: 1rem;*/
     }
     .headline h1 strong {
@@ -95,5 +97,8 @@
     }
     .headline section {
         margin-top: 1rem;
+    }
+    .bio p {
+        width: 100%;
     }
 }
