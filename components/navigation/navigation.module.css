@@ -1,0 +1,30 @@
+.navigation {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 6rem 3rem 0 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    position: sticky;
+}
+
+.logoContainer {
+    height: 5rem;
+    position: relative;
+    width: 10rem;
+}
+
+
+@media screen and (max-width: 480px){
+    .navigation {
+        padding: 2rem;
+    }
+    .logoContainer {
+        height: 4rem;
+        width: 8rem;
+    }
+}

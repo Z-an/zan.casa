@@ -14,31 +14,17 @@
 }
 
 .content {
+    margin-top: 6rem;
+    width: 100%;
+}
+
+.bio {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 3rem;
     padding: 0 3rem;
     top: 50%;
-}
-
-.navigation {
-    width: fit-content;
-    height: fit-content;
-    position: relative;
-    padding: 6rem 3rem 0 3rem;
-    margin-bottom: 4rem;
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.logoContainer {
-    height: 5rem;
-    position: relative;
-    width: 10rem;
 }
 
 .links {
@@ -58,7 +44,7 @@
 }
 
 .links h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 133%;
     letter-spacing: 0em;
     font-family: "PPNeueMontreal-Regular";
@@ -66,7 +52,6 @@
 
 .headline {
     display: flex;
-    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -85,22 +70,25 @@
 
 @media screen and (max-width: 480px){
     .content {
+        margin-top: 10rem;
+    }
+    .bio {
         gap: 3rem;
         padding: 0 2rem;
     }
     .navigation {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     .logoContainer {
         height: 4rem;
         width: 8rem;
     }
     .links {
-        padding: 3rem 2rem 6rem;
+        padding: 3rem 1.5rem 6rem;
     }
-    .headline {
-        font-size: 4rem;
-        text-indent: 1.3125rem;
+    .headline h1 {
+        font-size: 3rem;
+        /*text-indent: 1rem;*/
     }
     .headline h1 strong {
         margin-left: 0rem;

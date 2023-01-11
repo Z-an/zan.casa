@@ -1,0 +1,33 @@
+.main {
+    padding: 12rem 0;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.leftHandPane {
+    width: 12rem;
+    margin-left: -12rem;
+    height: 100%
+}
+
+.content {
+    width: 40rem;
+    min-height: 100vh;
+}
+
+
+@media screen and (max-width: 480px){
+    .main {
+        flex-direction: column;
+    }
+    .leftHandPane {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    .content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
