@@ -43,7 +43,7 @@ export default function Home() {
               <hr/>
               <a>Dynamic themes, with just css</a>
               <a>Design Systems for tiny teams</a>
-              <Link href="/writing">On "Elegant" Software</Link>
+              <Link href="/writing">On Elegant Software</Link>
             </section>
           </div>
         </div>
