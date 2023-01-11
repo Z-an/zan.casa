@@ -3,7 +3,6 @@ import './globals.css'
 import Zan from 'public/assets/svg/zan.svg';
 import styles from './page.module.css'
 import localFont from '@next/font/local'
-import { Navigation } from '../components/navigation/Navigation'
 import Link from 'next/link';
 
 const snellBold = localFont({
