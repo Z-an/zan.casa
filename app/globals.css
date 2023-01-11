@@ -75,7 +75,7 @@ a {
 
 p {
     color: var(--text-low-contrast);
-    line-height: 175%;
+    line-height: 150%;
     font-weight: 400;
     font-size: 1rem;
 }
