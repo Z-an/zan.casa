@@ -10,7 +10,7 @@
     :root {
         --text-low-contrast: hsl(247deg 15% 75%);
         --text-high-contrast: hsl(240deg 6% 92%);
-        --main-bg: #000000;
+        --main-bg: #0d0e12;
         --elevation-bg: #05050F;
     }
 }
@@ -26,7 +26,7 @@
 [data-theme="dark"] {
     --text-low-contrast: hsl(247deg 15% 75%);
     --text-high-contrast: hsl(240deg 6% 92%);
-    --main-bg: #000000;
+    --main-bg: #0d0e12;
     --elevation-bg: #05050F;
 }
 
