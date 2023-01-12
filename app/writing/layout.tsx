@@ -10,7 +10,6 @@ export default async function Layout({
 
     return (
         <div>
-            <Navigation />
         <main className={styles.main}>
             <div className={styles.leftHandPane}><Link href="/">← Index</Link></div>
             <div className={styles.content}>{children}</div>

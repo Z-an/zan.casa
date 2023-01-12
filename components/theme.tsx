@@ -6,6 +6,7 @@ import { Sun, Moon, Monitor } from "phosphor-react";
 export const Theme: React.FC<{size: string}> = (size) => {
     const [theme, setTheme] = useState('system');
 
+    // renders client side
     useEffect(() => {
         const localStorageTheme = localStorage.getItem('theme')
         const savedTheme = localStorageTheme !== null? localStorageTheme : 'system'
