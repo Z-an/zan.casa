@@ -19,7 +19,7 @@
 }
 
 .back:hover {
-    transition: 0.1s;
+    transition: 0s;
     background: var(--elevation-1);
     box-shadow: 8px 0px 0px 4px var(--elevation-1), -8px 0px 0px 4px var(--elevation-1);
 }
@@ -27,10 +27,6 @@
 .back:hover p,
 .back:hover svg {
     color: var(--text-high-contrast);
-}
-
-.back:active {
-
 }
 
 .leftHandPane p {
@@ -41,5 +37,6 @@
     .leftHandPane {
         margin-left: 0;
         padding: 1.5rem 1.5rem 0;
+        position: static;
     }
 }

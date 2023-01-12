@@ -5,21 +5,13 @@ import Link from "next/link";
 import { ArrowLeft } from "phosphor-react";
 import { useEffect, useState } from "react";
 
-export const LeftNavigation: React.FC = () => {
-
-    const returnToPage = () => {
-        const topPath = document.location.pathname.split("/").pop()
-        const parentPath = document.location.pathname.replace(`${topPath}`, "")
-        console.log('topPath:', topPath)
-        console.log('parentPath:', parentPath)
-        window.location.href = parentPath
-    }
+export const LeftNavigation: React.FC<{returnPage: string}> = ({returnPage}) => {
 
     return (
         <div className={styles.leftHandPane}>
-            <div onClick={() => returnToPage()}>
+            <Link href={returnPage} scroll={true}>
                 <div className={styles.back}><ArrowLeft size={20}/><p>Return</p></div>
-            </div>
+            </Link>
         </div>
 
     )
