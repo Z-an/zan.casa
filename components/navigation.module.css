@@ -21,7 +21,6 @@
     width: 10rem;
 }
 
-
 @media screen and (max-width: 480px){
     .navigation {
         padding: 1.5rem;

@@ -4,7 +4,14 @@ import styles from "./theme.module.css";
 import { Sun, Moon, Monitor } from "phosphor-react";
 
 export const Theme: React.FC<{size: string}> = (size) => {
-    const [theme, setTheme] = useState('unspecified');
+    const [theme, setTheme] = useState('system');
+
+    useEffect(() => {
+        const localStorageTheme = localStorage.getItem('theme')
+        const savedTheme = localStorageTheme !== null? localStorageTheme : 'system'
+        setTheme(savedTheme)
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }, []);
 
     const onSelection = ( themeSelection: string ) => {
         localStorage.setItem('theme', themeSelection);

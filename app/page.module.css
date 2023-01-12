@@ -72,7 +72,7 @@
 
 @media screen and (max-width: 480px){
     .content {
-        margin-top: 12rem;
+        margin-top: 8rem;
     }
     .bio {
         gap: 3rem;
@@ -89,7 +89,7 @@
         padding: 1.5rem 1.5rem 6rem;
     }
     .headline h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
         /*text-indent: 1rem;*/
     }
     .headline h1 strong {
