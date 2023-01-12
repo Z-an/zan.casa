@@ -1,9 +1,9 @@
 'use client'
 import { useState, useEffect } from "react";
-import styles from "./theme.module.css";
+import styles from "./themeToggle.module.css";
 import { Sun, Moon, Monitor } from "phosphor-react";
 
-export const themeToggle: React.FC<{size: string}> = (size) => {
+export const ThemeToggle: React.FC<{size: string}> = (size) => {
     const [theme, setTheme] = useState('system');
 
     // renders client side
