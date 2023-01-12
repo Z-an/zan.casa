@@ -9,15 +9,55 @@
     width: 12rem;
     margin-left: -12rem;
     height: 100%;
-    padding: 1rem 0;
-}
-
-.leftHandPage {
-    font-size: 2rem;
+    padding: 0.5rem 0;
 }
 
 .content {
     width: 40rem;
+}
+
+.postContainer {
+    border-top: solid 1px var(--outline);
+}
+
+.postContainerHeader {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 0;
+}
+
+.posts {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.posts div {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.posts:hover div {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.posts div {
+    opacity: 1;
+    transition: 0.2s;
+    border-radius: 0.75rem;
+}
+
+.posts div:hover {
+    opacity: 1;
+    transition: 0.1s;
+    box-shadow: 20px 0px 0px 2px var(--elevation-1), -20px 0px 0px 2px var(--elevation-1);
+    background: var(--elevation-1);
+}
+
+
+.posts h3 {
+    color: var(--text-low-contrast);
 }
 
 

@@ -12,7 +12,8 @@
     position: sticky;
     max-width: 52rem;
     margin: auto;
-    background: linear-gradient(180deg, var(--main-bg), transparent)
+    background: linear-gradient(180deg, var(--main-bg), transparent);
+    z-index: 10;
 }
 
 .logoContainer {

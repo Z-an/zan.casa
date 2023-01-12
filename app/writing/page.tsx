@@ -1,15 +1,36 @@
+import { Post } from '../../components/Post'
 import '../globals.css'
+import styles from './writing.module.css'
 
 export default function Home() {
+  const today = new Date().toJSON().slice(0, 10);
   return (
-    <article>
-        <h1>On Elegance</h1>
-        <p>Mac Studio is an entirely new Mac desktop. It packs outrageous performance, extensive connectivity and new capabilities into an unbelievably compact form, putting everything you need within easy reach and transforming any space into a studio. And it all starts with your choice of the ferociously fast M1 Max or the all-new M1 Ultra — the most powerful chip ever in a personal computer.</p>
-        <p>Mac Studio is an entirely new Mac desktop. It packs outrageous performance, extensive connectivity and new capabilities into an unbelievably compact form, putting everything you need within easy reach and transforming any space into a studio. And it all starts with your choice of the ferociously fast M1 Max or the all-new M1 Ultra — the most powerful chip ever in a personal computer.</p>
-        <p>Mac Studio is an entirely new Mac desktop. It packs outrageous performance, extensive connectivity and new capabilities into an unbelievably compact form, putting everything you need within easy reach and transforming any space into a studio. And it all starts with your choice of the ferociously fast M1 Max or the all-new M1 Ultra — the most powerful chip ever in a personal computer.</p>
-        <p>Mac Studio is an entirely new Mac desktop. It packs outrageous performance, extensive connectivity and new capabilities into an unbelievably compact form, putting everything you need within easy reach and transforming any space into a studio. And it all starts with your choice of the ferociously fast M1 Max or the all-new M1 Ultra — the most powerful chip ever in a personal computer.</p>
-        <p>Mac Studio is an entirely new Mac desktop. It packs outrageous performance, extensive connectivity and new capabilities into an unbelievably compact form, putting everything you need within easy reach and transforming any space into a studio. And it all starts with your choice of the ferociously fast M1 Max or the all-new M1 Ultra — the most powerful chip ever in a personal computer.</p>
-        <p>Mac Studio is an entirely new Mac desktop. It packs outrageous performance, extensive connectivity and new capabilities into an unbelievably compact form, putting everything you need within easy reach and transforming any space into a studio. And it all starts with your choice of the ferociously fast M1 Max or the all-new M1 Ultra — the most powerful chip ever in a personal computer.</p>
-    </article>
+    <div className={styles.posts}>
+        <h1>Writing</h1>
+        <section className={styles.postContainer}>
+          <h3 className={styles.postContainerHeader}>Product</h3>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+        </section>
+        <section className={styles.postContainer}>
+          <h3 className={styles.postContainerHeader}>Product</h3>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+        </section>
+        <section className={styles.postContainer}>
+          <h3 className={styles.postContainerHeader}>Product</h3>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+          <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+        </section>
+    </div>
   )
 }

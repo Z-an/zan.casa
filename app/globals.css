@@ -4,6 +4,8 @@
     --text-high-contrast: #1A1523;
     --main-bg: #F8F9FA;
     --elevation-bg: #FBFCFD;
+    --elevation-1: hsla(210, 17%, 93%, 1);
+    --outline: hsla(210, 17%, 90%, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,6 +14,8 @@
         --text-high-contrast: hsl(240deg 6% 92%);
         --main-bg: #0d0e12;
         --elevation-bg: #05050F;
+        --elevation-1: hsl(240deg 6% 12%);
+        --outline: hsl(240deg 6% 20%);
     }
 }
 
@@ -21,6 +25,8 @@
     --text-high-contrast: #1A1523;
     --main-bg: #F8F9FA;
     --elevation-bg: #FBFCFD;
+    --elevation-1: hsla(210, 17%, 93%, 1);
+    --outline: hsla(210, 17%, 90%, 1);
 }
 
 [data-theme="dark"] {
@@ -28,6 +34,8 @@
     --text-high-contrast: hsl(240deg 6% 92%);
     --main-bg: #0d0e12;
     --elevation-bg: #05050F;
+    --elevation-1: hsl(240deg 6% 12%);
+    --outline: hsl(240deg 6% 20%);
 }
 
 @font-face {
