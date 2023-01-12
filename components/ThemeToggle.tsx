@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./theme.module.css";
 import { Sun, Moon, Monitor } from "phosphor-react";
 
-export const Theme: React.FC<{size: string}> = (size) => {
+export const themeToggle: React.FC<{size: string}> = (size) => {
     const [theme, setTheme] = useState('system');
 
     // renders client side
