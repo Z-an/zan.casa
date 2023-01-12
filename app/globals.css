@@ -14,7 +14,7 @@
         --text-high-contrast: hsl(240deg 6% 92%);
         --main-bg: #0d0e12;
         --elevation-bg: #05050F;
-        --elevation-1: hsla(240, 9%, 9%, 1);
+        --elevation-1: hsla(240, 7%, 14%, 1);
         --outline: hsl(240deg 6% 20%);
     }
 }
@@ -34,7 +34,7 @@
     --text-high-contrast: hsl(240deg 6% 92%);
     --main-bg: #0d0e12;
     --elevation-bg: #05050F;
-    --elevation-1: hsla(240, 9%, 9%, 1);
+    --elevation-1: hsla(240, 7%, 14%, 1);
     --outline: hsl(240deg 6% 20%);
 }
 

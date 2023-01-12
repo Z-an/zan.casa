@@ -7,4 +7,5 @@
 .post label {
     font-size: 1rem;
     color: var(--text-low-contrast);
+    cursor: pointer;
 }
