@@ -1,10 +1,3 @@
-.main {
-    padding: 6rem 0;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-}
-
 .leftHandPane {
     width: 12rem;
     margin-left: -12rem;
@@ -34,25 +27,25 @@
 
 .posts div {
     opacity: 1;
-    transition: 0.3s;
+    transition: 0.1s ease-out;
 }
 
 .posts:hover div {
-    opacity: 0.3;
-    transition: 0.3s;
+    opacity: 0.4;
+    transition: 0.1s ease-out;
 }
 
 .posts div {
     opacity: 1;
-    transition: 0.2s;
+    transition: 1s;
     border-radius: 0.75rem;
 }
 
 .posts div:hover {
     opacity: 1;
     transition: 0.1s;
-    box-shadow: 20px 0px 0px 2px var(--elevation-1), -20px 0px 0px 2px var(--elevation-1);
-    background: var(--elevation-1);
+    /*box-shadow: 20px 0px 0px 2px var(--elevation-1), -20px 0px 0px 2px var(--elevation-1);*/
+    /*background: var(--elevation-1);*/
 }
 
 

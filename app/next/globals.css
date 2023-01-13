@@ -57,13 +57,13 @@
     --tile-start-rgb: 2, 13, 46;
     --tile-end-rgb: 2, 5, 19;
     --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
+      #FFFFFF10,
+      #FFFFFF50,
+      #FFFFFF60,
+      #FFFFFF70,
+      #FFFFFF80,
+      #FFFFFF80,
+      #FFFFFF10
     );
 
     --callout-rgb: 20, 20, 20;
@@ -99,6 +99,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 
 @media (prefers-color-scheme: dark) {
   html {

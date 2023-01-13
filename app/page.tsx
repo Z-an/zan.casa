@@ -12,8 +12,8 @@ const snellBold = localFont({
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.content}>
+    <main>
+      <article>
         <div className={styles.bio}>
           <div>
             <div className={styles.headline}>
@@ -46,7 +46,7 @@ export default function Home() {
               <Link href="/writing">On Elegant Software</Link>
             </section>
           </div>
-        </div>
+        </article>
     </main>
   )
 }
