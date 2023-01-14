@@ -27,18 +27,12 @@
 
 .posts div {
     opacity: 1;
-    transition: 0.1s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .posts:hover div {
-    opacity: 0.4;
+    opacity: 0.3;
     transition: 0.1s ease-out;
-}
-
-.posts div {
-    opacity: 1;
-    transition: 1s;
-    border-radius: 0.75rem;
 }
 
 .posts div:hover {
@@ -64,6 +58,5 @@
     }
     .content {
         width: 100%;
-        padding: 1.5rem;
     }
 }

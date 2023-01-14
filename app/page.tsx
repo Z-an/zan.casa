@@ -20,18 +20,17 @@ export default function Home() {
               <h1>Zan Thomson</h1>
             </div>
             <p>Surfing curiosity, learning by building. Playing with design, code and meticulously crafted software.</p>
-            <p></p>
             <p>Currently: <strong>Product Lead at Liven.</strong> Building towards an independent practice.</p>
           </div>
         </div>
         <div className={styles.links}>
             <section>
-              <h3>Building</h3>
+              <h3>Projects</h3>
               <hr/>
               <a>Nomnie</a>
             </section>
             <section>
-              <h3>Exploring</h3>
+              <h3>Prototypes</h3>
               <hr/>
               <a>Design Systems</a>
               <a>Brand Identity</a>

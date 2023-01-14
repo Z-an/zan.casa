@@ -12,8 +12,8 @@ export default function Home() {
         <div className={styles.posts}>
             <h1>Writing</h1>
             <ul className={styles.postContainer}>
-              <h3 className={styles.postContainerHeader}>Product</h3>
-              <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
+              <h3 className={styles.postContainerHeader}>Design Engineering</h3>
+              <Post title={'Elements of Tactile UI: Sketchpad #1'} slug={'tactile-ui'} date={today}/>
               <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
               <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
               <Post title={'Lorem ipsum dolor sit amet'} slug={'on-elegance'} date={today}/>
