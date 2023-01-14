@@ -48,7 +48,7 @@ const mixBlendModeOptions = [
 
 export default function Home() {
     const [mixBlendMode, setMixBlendMode] = useState('overlay')
-    const [brightness, setBrightness] = useState('200')
+    const [brightness, setBrightness] = useState('60')
     const [contrast, setContrast] = useState('70')
     const [textureSrc, setTextureSrc] = useState(`url(${Grid.src})`)
     const [backgroundGradient, setBackgroundGradient] = useState(true)
@@ -97,7 +97,7 @@ export default function Home() {
                     <hr></hr>
                     <div className={`${styles.horizontalFlex}`}>
                         <div className={styles.colorTextureCard} style={blendTextureParams as React.CSSProperties}>
-                            <h3 className={`${satoshiBold.className} ${styles.demoText}`}>Yo<strong className={kobataBold.className}>u</strong> <strong className={kobataBold.className}>d</strong >on<strong className={kobataBold.className}>'</strong>t<br/>nee<strong className={kobataBold.className}>d</strong> <strong className={kobataBold.className}>a</strong>n<br/>app<strong className={kobataBold.className}>.</strong></h3>
+                            <h3 className={`${satoshiBold.className} ${styles.demoText}`}>Yo<strong className={kobataBold.className}>u</strong> <strong className={kobataBold.className}>d</strong >on<strong className={kobataBold.className}>'</strong>t<br/><strong className={kobataBold.className}>n</strong>eed <strong className={kobataBold.className}>a</strong>n<br/>app<strong className={kobataBold.className}>.</strong></h3>
                         </div>
                         <div className={`${styles.verticalFlex} ${styles.elevation} ${styles.fullWidth}`}>
                             <div className={styles.formInputContainer}>
