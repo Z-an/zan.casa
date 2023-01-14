@@ -49,10 +49,10 @@ const mixBlendModeOptions = [
 export default function Home() {
     const [mixBlendMode, setMixBlendMode] = useState('overlay')
     const [brightness, setBrightness] = useState('200')
-    const [contrast, setContrast] = useState('30')
+    const [contrast, setContrast] = useState('70')
     const [textureSrc, setTextureSrc] = useState(`url(${Grid.src})`)
     const [backgroundGradient, setBackgroundGradient] = useState(true)
-    const [hue, setHue] = useState('245')
+    const [hue, setHue] = useState('263')
 
     const gradientColor = adjustHue(22.5, `hsl(${hue}deg 90% 50%)`)
     console.log('gradientColor:', gradientColor)
@@ -65,15 +65,6 @@ export default function Home() {
         '--background': backgroundGradient? `radial-gradient(53.25% 53.25% at 25% 23%, ${gradientColor} 0%, ${gradientColor} 67.71%, hsl(${hue}deg 90% 50%) 100%)`:`hsl(${hue}deg 90% 50%)`,
         '--text': `hsl(${hue}deg 50% 90%)`,
     }
-
-    function mixBlendModeChangeFunc() {
-        const mixBlendDropdown = document.getElementById("mixBlendDropdown");
-        if (mixBlendDropdown !== null) {
-            const selectedValue = mixBlendDropdown.options[mixBlendDropdown.selectedIndex].value;
-            setMixBlendMode(selectedValue)
-        }
-      }
-
     
     return (
         <main>
