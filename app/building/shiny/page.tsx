@@ -110,7 +110,7 @@ export default function Home() {
                         </div>
                         <div className={`${styles.verticalFlex} ${styles.elevation} ${styles.fullWidth}`}>
                             <div className={styles.formInputContainer}>
-                                <select value={mixBlendMode} id="mixBlendDropdown" onChange={(value) => mixBlendModeChangeFunc()}>
+                                <select value={mixBlendMode} id="mixBlendDropdown" onChange={(value) => setMixBlendMode(value.target.value)}>
                                     {mixBlendModeOptions.map((item, index)=>{
                                         return <option key={index} value={item}>{item}</option>
                                     })}
@@ -174,6 +174,7 @@ export default function Home() {
                         <li>Removing any <code>display: flex|grid</code> declarations on the parent container.</li>
                         <li>Wrapping the pseudo-element class in a plain <code>div</code> component.</li>
                     </ol>
+                    <p>Safari (webkit) doesn't enforce the border-radius of the parent container when <code>overflow: hidden</code> is used to contain animated gradient. To fix this, add <code>isolation: isolate</code> to the parent.</p>
                 </section>
             </article>
         </main>
