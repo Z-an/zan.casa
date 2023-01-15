@@ -5,7 +5,7 @@ import styles from './tactile-ui.module.css'
 import Zan from 'public/assets/svg/zan.svg';
 import Grid from 'public/assets/textures/grid.png';
 import Grain1 from 'public/assets/textures/grain.png';
-import Grain2 from 'public/assets/textures/grain2.png';
+import Grain2 from 'public/assets/textures/rainbow-grain.png';
 import Plastic from 'public/assets/textures/plastic.png';
 import Light1 from 'public/assets/textures/light1.png';
 import Scratch from 'public/assets/textures/scratch.png';
@@ -47,6 +47,14 @@ const mixBlendModeOptions = [
     'luminosity'
 ]
 
+const navItems = [
+    'Lemon',
+    'Tangerine',
+    'Ladybug',
+    'White Death',
+    'The Wolf'
+]
+
 const textures = [
     {'url': `url(${Grid.src})`, 'obj': Grid},
     {'url': `url(${Grain1.src})`, 'obj': Grain1},
@@ -65,9 +73,10 @@ export default function Home() {
     const [textureSrc, setTextureSrc] = useState(`url(${Grid.src})`)
     const [backgroundGradient, setBackgroundGradient] = useState(true)
     const [hue, setHue] = useState('263')
+    const [hoveredNavItem, setHoveredNavItem] = useState(-1)
+    console.log(hoveredNavItem)
 
     const gradientColor = adjustHue(22.5, `hsl(${hue}deg 90% 50%)`)
-    console.log('gradientColor:', gradientColor)
     
     const blendTextureParams = {
         '--mix-blend-mode': mixBlendMode,
@@ -89,7 +98,7 @@ export default function Home() {
                 <h1>Elements of Tactile UI</h1>
                 <h3 className={styles.subHeading}>Sketchpad #1</h3>
                 <div className={styles.divider}/>
-                <p>Product designers are always looking for new ways to make the elements of their interfaces more <strong>satisfying, tasty, and weighty</strong> to interact with. In the physical-world, product quality is tightly connected to its texture, weight, and craftsmanship.</p>
+                <p>For real world objects, product quality is described in terms of its texture, weight, balance, feel. To create digital experiences that exude care and craft then, it makes sense for us to take inspiration from the objects and materials of the natural world.</p>
                 <section className={styles.section}>
                     <h2>Gradient borders</h2>
                     <p>To achieve the above result, we need a gradient border. But gradient borders aren't directly supported in CSS3. We're going to have to use pseudo-elements to achieve the result, via: <code>::before</code> and <code>::after</code>.</p>
@@ -172,6 +181,22 @@ export default function Home() {
                                 )
                             )}
                         </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Bringing it all together</h2>
+                    <p>Let's see how can we can create a beautiful floating navigation component with these techniques. FYI, this one is best experienced in dark mode due to some choices.</p>
+                    <div className={styles.tactileNavContainer} >
+                        <nav className={styles.tactileNav}>
+                            { navItems.map((item, index) => (
+                                <div key={index} className={`${( hoveredNavItem === index ) && styles.tactileNavItemHoverText} ${styles.tactileNavItem}`} onMouseOver={(e) => setHoveredNavItem(index)}>
+                                    {item}
+                                    { ( hoveredNavItem===index )? 
+                                        <motion.div className={styles.tactileNavItemHover} layoutId="tactileNavItemHover"/> : null }
+                                </div>
+                                ))
+                            }
+                        </nav>
                     </div>
                 </section>
                 <section>

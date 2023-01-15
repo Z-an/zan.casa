@@ -1,6 +1,6 @@
 /* Colours assigned based on system defaults of user. */
 :root {
-    --text-low-contrast: hsla(247, 4%, 35%, 1);
+    --text-low-contrast: hsla(247, 4%, 40%, 1);
     --text-high-contrast: #1A1523;
     --main-bg: #F8F9FA;
     --elevation-bg: #FBFCFD;
@@ -10,6 +10,7 @@
     --primary: #4200FF;
 
     --outline-opaque-soft: #00000020;
+    --outline-opaque-mid: #00000040;
     --outline-opaque-hard: #00000060;
 
     --shine-border: conic-gradient(
@@ -37,6 +38,7 @@
         --primary: #4200FF;
     
         --outline-opaque-soft: #FFFFFF20;
+        --outline-opaque-mid: #FFFFFF40;
         --outline-opaque-hard: #FFFFFF60;
     
         --shine-border: conic-gradient(
@@ -55,7 +57,7 @@
 
 /* Themes set for explicit selection by the user */
 [data-theme="light"] {
-    --text-low-contrast: hsla(247, 4%, 35%, 1);
+    --text-low-contrast: hsla(247, 4%, 40%, 1);
     --text-high-contrast: #1A1523;
     --main-bg: #F8F9FA;
     --elevation-bg: #FBFCFD;
@@ -64,7 +66,8 @@
 
     --primary: #4200FF;
 
-    --outline-opaque-soft: #00000020;
+    --outline-opaque-soft: #00000010;
+    --outline-opaque-mid: #00000040;
     --outline-opaque-hard: #00000060;
 
     --shine-border: conic-gradient(
@@ -90,17 +93,18 @@
 
     --primary: #4200FF;
 
-    --outline-opaque-soft: #FFFFFF20;
+    --outline-opaque-soft: #FFFFFF10;
+    --outline-opaque-mid: #FFFFFF40;
     --outline-opaque-hard: #FFFFFF60;
 
     --shine-border: conic-gradient(
-        #ffffff80,
+        #ffffff95,
         #ffffff40,
         #ffffff30,
         #ffffff20,
-        #ffffff10,
-        #ffffff10,
-        #ffffff80
+        #ffffff15,
+        #ffffff15,
+        #ffffff90
       );
 
     --shadow-lg: 0px 24px 16px -16px rgba(0,0,0,0.80);
