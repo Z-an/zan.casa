@@ -27,22 +27,15 @@ export default function Home() {
             <section>
               <h3>Projects</h3>
               <hr/>
-              <a>Nomnie</a>
             </section>
             <section>
               <h3>Prototypes</h3>
               <hr/>
-              <a>Design Systems</a>
-              <a>Brand Identity</a>
-              <a>Type Design</a>
-              <a>UI Engineering</a>
             </section>
             <section>
               <h3>Writing</h3>
               <hr/>
-              <a>Dynamic themes, with just css</a>
-              <a>Design Systems for tiny teams</a>
-              <Link href="/writing">On Elegant Software</Link>
+              <Link href="/writing/tactile-ui">Elements of Tactile UI</Link>
             </section>
           </div>
         </article>
