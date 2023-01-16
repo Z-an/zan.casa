@@ -213,8 +213,8 @@ main {
 
 article {
     display: flex;
-    width: 100%;
-    max-width: 40rem;
+    width: 40rem;
+    min-width: 40rem;
     justify-content: left;
     flex-direction: column;
 }

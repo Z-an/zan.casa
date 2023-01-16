@@ -1,0 +1,66 @@
+.imageContainer {
+    width: 100%;
+    padding-top: 43%;
+
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin: 1rem auto 2rem;
+    border: solid 1px var(--outline-opaque-soft);
+    box-shadow: var(--shadow-lg);
+}
+
+.divider {
+    width: 100%;
+    border: solid 0.5px var(--outline-opaque-soft);
+    margin: 1rem 0;
+}
+
+.subHeading {
+    color: var(--text-low-contrast);
+    margin-top: 0.5rem;
+}
+
+.chartNav {
+    display: flex;
+    flex-direction: row;
+}
+
+.chartNavButton {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: column;
+    padding: 0.75rem 1.5rem 0;
+    width: 33%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.chartNavButton:hover {
+    background: #F1F3F5;
+    border-color: transparent;
+}
+
+.chartNavButton:active {
+    background: #ECEEF0;
+    border-color: transparent;
+}
+
+.chartNavButtonUnderline {
+    height: 3px;
+    width: 100%;
+    background: #0091FF;
+    margin-top: 0.5rem;
+    border-radius: 3rem;
+}
+
+.chartNavLabel {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.chartNavMetric {
+    margin: 0;
+    font-size: 2rem;
+}
