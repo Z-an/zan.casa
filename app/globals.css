@@ -248,6 +248,10 @@ select {
 }
 
 @media screen and (max-width: 480px){
+    article {
+        min-width: 100%;
+        width: 100%;
+    }
     article h1 {
         font-size: 2rem;
     }
