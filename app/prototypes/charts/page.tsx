@@ -242,7 +242,7 @@ export default function Home() {
                 <h1>Visualising Data</h1>
                 <h3 className={styles.subHeading}>Exploring popular charting libraries.</h3>
                 <div className={styles.divider}/>
-                <p>This is a page for evaluating various charting library solutions, based on designs from the Nomnie design system. When evaluating solutions, I care about:</p>
+                <p>This is a page for evaluating various charting library solutions, based on designs from the Nomnie design system. When evaluating solutions, we care about:</p>
                     <ol>
                         <li>Ability to simply and accurately reflect designs (custom type, colour, etc).</li>
                         <li>Simplicity of API.</li>
