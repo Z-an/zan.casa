@@ -24,6 +24,7 @@
 .chartNav {
     display: flex;
     flex-direction: row;
+    margin: 0.5rem;
 }
 
 .chartNavButton {
@@ -63,4 +64,11 @@
 .chartNavMetric {
     margin: 0;
     font-size: 2rem;
+}
+
+.lineChart {
+    border: 0.5px solid #D7DBDF;
+    box-shadow: 0px 8px 24px -5px rgba(0, 0, 0, 0.09);
+    border-radius: 1rem;
+    padding-bottom: 2rem;
 }

@@ -261,42 +261,41 @@ export default function Home() {
                     <div className={styles.divider} />
                     <p>First up is Rechart.</p>
                     <hr></hr>
-                    <div className={styles.chartNav}>
-                        { navItems.map((item, index) => (
-                            <div key={index} className={styles.chartNavButton} onClick={(e) => setSelectedNavOption({'label': item.label, 'index': index})}>
-                                <p className={styles.chartNavLabel}>{item.label}</p>
-                                <h2 className={styles.chartNavMetric}>{item.metric}</h2>
-                                { ( selectedNavOption.label === item.label )? 
-                                    <motion.div className={styles.chartNavButtonUnderline} layoutId="chartNavButtonUnderline"/> : null }
-                            </div>
-                            ))
-                        }
-                    </div>
-                    <AreaChart width={640} height={250} data={dataDict[selectedNavOption.index]} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                        <defs>
-                            <linearGradient id="colorthisYear" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#0091FF" stopOpacity={0.1}/>
-                                <stop offset="95%" stopColor="#0091FF" stopOpacity={0}/>
-                            </linearGradient>
-                            <linearGradient id="colorlastYear" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#8E4EC6" stopOpacity={0.1}/>
-                                <stop offset="95%" stopColor="#8E4EC6" stopOpacity={0}/>
-                            </linearGradient>
-                        </defs>
-                            <XAxis dataKey="name" tickMargin={8} stroke="#D7DBDF" tick={{ fill: '#687076' }} style={{
-                                fontSize: '0.875em'
-                            }}/>
-                            {/*<YAxis tickMargin={8}  stroke="#D7DBDF" tick={{ fill: '#687076' }} style={{
-                                fontSize: '0.875em',
-                                marginRight: '1rem',
-                            }}/>*/}
-                            <CartesianGrid strokeDasharray="1 5" />
-                            <Tooltip />
-                            <Area type="monotone" dataKey="thisYear" stroke="#006ADC" fillOpacity={1} fill="url(#colorthisYear)" strokeWidth="2"/>
-                            <Area type="monotone" dataKey="lastYear" stroke="#8E4EC6" fillOpacity={1} fill="url(#colorlastYear)" strokeWidth="2" strokeDasharray="2 2" />
-                    </AreaChart>
-                    <div>
-                        <div className={styles.gradientBox}></div>
+                    <div className={styles.lineChart}>
+                        <div className={styles.chartNav}>
+                            { navItems.map((item, index) => (
+                                <div key={index} className={styles.chartNavButton} onClick={(e) => setSelectedNavOption({'label': item.label, 'index': index})}>
+                                    <p className={styles.chartNavLabel}>{item.label}</p>
+                                    <h2 className={styles.chartNavMetric}>{item.metric}</h2>
+                                    { ( selectedNavOption.label === item.label )? 
+                                        <motion.div className={styles.chartNavButtonUnderline} layoutId="chartNavButtonUnderline"/> : null }
+                                </div>
+                                ))
+                            }
+                        </div>
+                        <AreaChart width={640} height={250} data={dataDict[selectedNavOption.index]} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
+                            <defs>
+                                <linearGradient id="colorthisYear" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="5%" stopColor="#0091FF" stopOpacity={0.1}/>
+                                    <stop offset="95%" stopColor="#0091FF" stopOpacity={0}/>
+                                </linearGradient>
+                                <linearGradient id="colorlastYear" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="5%" stopColor="#8E4EC6" stopOpacity={0.1}/>
+                                    <stop offset="95%" stopColor="#8E4EC6" stopOpacity={0}/>
+                                </linearGradient>
+                            </defs>
+                                <XAxis dataKey="name" tickMargin={8} stroke="#D7DBDF" tick={{ fill: '#687076' }} style={{
+                                    fontSize: '0.875em'
+                                }}/>
+                                {/*<YAxis tickMargin={8}  stroke="#D7DBDF" tick={{ fill: '#687076' }} style={{
+                                    fontSize: '0.875em',
+                                    marginRight: '1rem',
+                                }}/>*/}
+                                <CartesianGrid strokeDasharray="1 5" />
+                                <Tooltip />
+                                <Area type="monotone" dataKey="thisYear" stroke="#006ADC" fillOpacity={1} fill="url(#colorthisYear)" strokeWidth="2"/>
+                                <Area type="monotone" dataKey="lastYear" stroke="#8E4EC6" fillOpacity={1} fill="url(#colorlastYear)" strokeWidth="2" strokeDasharray="2 2" />
+                        </AreaChart>
                     </div>
                 </section>
             </article>
