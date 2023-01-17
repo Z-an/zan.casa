@@ -44,7 +44,6 @@
 
 
 .cardWrapper {
-    backdrop-filter: blur(8px);
     background: #08011c;
     border-radius: 3rem;
     transition: all 1s ease-out;
