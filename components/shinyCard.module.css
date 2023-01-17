@@ -71,7 +71,7 @@
     height: inherit;
     width: inherit;
     background-image: url('../public/assets/textures/cloth.png');
-    background-size: contain;
+    background-size: cover;
     mix-blend-mode: overlay;
     border-radius: inherit;
     filter: brightness(100%) contrast(150%);
