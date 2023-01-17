@@ -16,7 +16,6 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    isolation: isolate;
     position: relative;
     perspective: 1000px;
 }
@@ -32,7 +31,8 @@
     color: #cdcafc;
     border-radius: inherit;
     cursor: pointer;
-    border: 3px solid  hsl(247deg 100% 78%);
+    background-clip: padding-box;
+    border: 1px solid  transparent;
 }
 
 .cardContainer > h1 {
@@ -49,6 +49,9 @@
     border-radius: 3rem;
     transition: all 1s ease-out;
     opacity: 0s;
+    isolation: isolate;
+    overflow: hidden;
+    border: solid 2px rgb(109, 81, 252)
 }
 
 .cardContainer:before {
@@ -76,7 +79,7 @@
     background-size: contain;
     mix-blend-mode: overlay;
     border-radius: inherit;
-    filter: brightness(60%) contrast(150%);
+    filter: brightness(100%) contrast(150%);
 }
 
 .rotationWrapper {
