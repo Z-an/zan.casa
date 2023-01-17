@@ -14,7 +14,7 @@
 
 .prototypeContainer {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     position: relative;
     perspective: 1000px;
@@ -56,10 +56,8 @@
 .cardContainer:before {
     content: '';
     position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+    height: inherit;
+    width: inherit;
     background-image: url('../public/assets/textures/grain.png');
     background-size: contain;
     mix-blend-mode: multiply;
@@ -70,10 +68,8 @@
 .cardContainer:after {
     content: '';
     position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+    height: inherit;
+    width: inherit;
     background-image: url('../public/assets/textures/cloth.png');
     background-size: contain;
     mix-blend-mode: overlay;
