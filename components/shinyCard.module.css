@@ -1,0 +1,93 @@
+.dotGrid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 3rem 3rem;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      #FFFFFF00 1px,
+      transparent 0
+    );
+    background-position: center;
+    transform: translateZ(-500px);
+}
+
+.prototypeContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cardContainer {
+    width: 300px;
+    height: 400px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #cdcafc;
+    border-radius: inherit;
+    cursor: pointer;
+    border: 3px solid  hsl(247deg 100% 78%);
+}
+
+.cardContainer > h1 {
+    color: #cdcafc;
+    font-size: 2.5rem;
+    line-height: 112.5%;
+    z-index: 1;
+}
+
+
+.cardWrapper {
+    backdrop-filter: blur(8px);
+    background: #08011c;
+    border-radius: 3rem;
+    transition: all 1s ease-out;
+    opacity: 0s;
+}
+
+.cardContainer:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../public/assets/textures/grain.png');
+    background-size: contain;
+    mix-blend-mode: multiply;
+    border-radius: inherit;
+    filter: brightness(30%) contrast(60%);
+}
+
+.cardContainer:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../public/assets/textures/cloth.png');
+    background-size: contain;
+    mix-blend-mode: overlay;
+    border-radius: inherit;
+    filter: brightness(60%) contrast(150%);
+}
+
+.rotationWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: 0.1s;
+}
+
+.slowTransitionWrapper {
+    transition: 1s;
+}

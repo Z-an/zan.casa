@@ -1,9 +1,12 @@
+'use client'
 import Image from 'next/image'
 import './globals.css'
 import Zan from 'public/assets/svg/zan.svg';
 import styles from './page.module.css'
 import localFont from '@next/font/local'
 import Link from 'next/link';
+import { animate, motion, useMotionValue } from 'framer-motion';
+import { useEffect } from 'react';
 
 const snellBold = localFont({
   src: "../public/assets/fonts/SnellBT-Bold.otf",
@@ -11,6 +14,30 @@ const snellBold = localFont({
 });
 
 export default function Home() {
+
+  // mouse position
+  const mouseX = useMotionValue(
+    typeof window !== 'undefined' ? window.innerWidth / 2 : 0
+  );
+  const mouseY = useMotionValue(
+    typeof window !== 'undefined' ? window.innerHeight / 2 : 0
+  );
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+        // animate mouse x and y
+        animate(mouseX, e.clientX);
+        animate(mouseY, e.clientY);
+    };
+    if (typeof window === 'undefined') return;
+    // recalculate grid on resize
+    window.addEventListener('mousemove', handleMouseMove);
+    // cleanup
+    return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [mouseX, mouseY]);
+
   return (
     <main>
       <article>
