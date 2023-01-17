@@ -16,6 +16,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    isolation: isolate;
     position: relative;
     perspective: 1000px;
 }
