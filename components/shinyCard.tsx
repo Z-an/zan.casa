@@ -115,7 +115,7 @@ export const Card: React.FC = () => {
                 <div className={styles.dotGrid} />
                 <motion.div className={styles.cardWrapper} ref={cardRef} style={{ backgroundImage: sheen, opacity: 1 }} onMouseOver={(e) => setHoverState(true)} onMouseLeave={(e) => setHoverState(false)}>
                     <div className={styles.cardContainer}>
-                    <h1 className={`${satoshiBold.className} ${styles.demoText}`}>Yo<strong className={kobataBold.className}>u</strong> <strong className={kobataBold.className}>d</strong >on<strong className={kobataBold.className}>'</strong>t<br/><strong className={kobataBold.className}>n</strong>eed <strong className={kobataBold.className}>a</strong>n<br/>app<strong className={kobataBold.className}>.</strong></h1>
+                    <h1 className={`${satoshiBold.className} ${styles.demoText}`}>Yo<strong className={kobataBold.className}>u</strong> <strong className={kobataBold.className}>d</strong >on<strong className={kobataBold.className}>&apos;</strong>t<br/><strong className={kobataBold.className}>n</strong>eed <strong className={kobataBold.className}>a</strong>n<br/>app<strong className={kobataBold.className}>.</strong></h1>
                     </div>
                 </motion.div>
             </motion.div>
