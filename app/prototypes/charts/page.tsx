@@ -321,30 +321,28 @@ export default function Home() {
     const [intervalValue, setIntervalValue] = useState('WEEK')
     console.log(intervalValue)
     return (
-        <div>
-            <ChartContainer>
-                <ChartTopBar>
-                    <ChartNavigation >
-                        { navItems.map((item, index) => (
-                            <ChartNavigationItem
-                                key={index}
-                                label={item.label}
-                                metric={item.metric}
-                                selected={(selectedNavItem === index)}
-                                onClick={() => setSelectedNavItem(index)} />
-                            ))
-                        }
-                    </ChartNavigation>
-                    <ChartModifiersContainer>
-                        <button className={styles.dateTimeRangeButton}><Calendar size={24} weight='fill' /> Last 7 days <CaretDown size={16} weight='bold' /></button>
-                        <ChartIntervalToggle ariaLabel={'interval picker'} type={'single'} defaultValue={'WEEK'} onClick={(e) => setIntervalValue(e.target.attributes.id.value)}/>
-                    </ChartModifiersContainer>
-                </ChartTopBar>
-                <LineChart
-                    data={cleanData}
-                    primaryColor={"#0091FF"} 
-                    secondaryColor={"#8E4EC6"} />
-            </ChartContainer>
-        </div>
+          <ChartContainer>
+              <ChartTopBar>
+                  <ChartNavigation >
+                      { navItems.map((item, index) => (
+                          <ChartNavigationItem
+                              key={index}
+                              label={item.label}
+                              metric={item.metric}
+                              selected={(selectedNavItem === index)}
+                              onClick={() => setSelectedNavItem(index)} />
+                          ))
+                      }
+                  </ChartNavigation>
+                  <ChartModifiersContainer>
+                      <button className={styles.dateTimeRangeButton}><Calendar size={24} weight='fill' /> Last 7 days <CaretDown size={16} weight='bold' /></button>
+                      <ChartIntervalToggle ariaLabel={'interval picker'} type={'single'} defaultValue={'WEEK'} onClick={(e) => console.log(e)}/>
+                  </ChartModifiersContainer>
+              </ChartTopBar>
+              <LineChart
+                  data={cleanData}
+                  primaryColor={"#0091FF"} 
+                  secondaryColor={"#8E4EC6"} />
+          </ChartContainer>
     )
 }
