@@ -1,4 +1,4 @@
-import { LeftNavigation } from '../../../components/LeftNavigation'
+import { LeftNavigation } from '../../components/LeftNavigation'
 import '../../globals.css'
 import styles from '../writing.module.css'
 

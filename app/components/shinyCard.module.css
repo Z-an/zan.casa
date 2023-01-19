@@ -58,7 +58,7 @@
     position: absolute;
     height: inherit;
     width: inherit;
-    background-image: url('../public/assets/textures/grain.png');
+    background-image: url('../../public/assets/textures/grain.png');
     background-size: contain;
     mix-blend-mode: multiply;
     border-radius: inherit;
@@ -70,7 +70,7 @@
     position: absolute;
     height: inherit;
     width: inherit;
-    background-image: url('../public/assets/textures/cloth.png');
+    background-image: url('../../public/assets/textures/cloth.png');
     background-size: cover;
     mix-blend-mode: overlay;
     border-radius: inherit;

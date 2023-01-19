@@ -1,4 +1,4 @@
-import { Card } from '../../../components/shinyCard';
+import { Card } from '../../components/shinyCard';
   
 export default function Home() {
     return (

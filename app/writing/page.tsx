@@ -1,5 +1,5 @@
-import { LeftNavigation } from '../../components/LeftNavigation';
-import { Post } from '../../components/Post'
+import { LeftNavigation } from '../components/LeftNavigation';
+import { Post } from '../components/Post'
 import '../globals.css'
 import styles from './writing.module.css'
 

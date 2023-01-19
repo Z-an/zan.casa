@@ -1,6 +1,6 @@
 'use client'
-import { LeftNavigation } from '../../../components/LeftNavigation'
-import { ThemeToggle } from '../../../components/ThemeToggle'
+import { LeftNavigation } from '../../components/LeftNavigation'
+import { ThemeToggle } from '../../components/ThemeToggle'
 import styles from './tactile-ui.module.css'
 import Zan from 'public/assets/svg/zan.svg';
 import Grid from 'public/assets/textures/grid.png';

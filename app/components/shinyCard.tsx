@@ -7,12 +7,12 @@ import React from 'react';
 import { setConstantValue } from 'typescript';
 
 const kobataBold = localFont({
-    src: "../public/assets/fonts/Kobata-Bold.otf",
+    src: "../../public/assets/fonts/Kobata-Bold.otf",
     weight: '700'
   });
   
   const satoshiBold = localFont({
-      src: "../public/assets/fonts/Satoshi-Bold.otf",
+      src: "../../public/assets/fonts/Satoshi-Bold.otf",
       weight: '700'
     });
 

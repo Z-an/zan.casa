@@ -1,5 +1,5 @@
-import { Navigation } from '../components/Navigation'
-import { AnalyticsWrapper } from '../components/Analytics';
+import { Navigation } from './components/Navigation'
+import { AnalyticsWrapper } from './components/Analytics';
 import './globals.css'
 
 export default function RootLayout({
