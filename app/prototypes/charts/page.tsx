@@ -7,10 +7,11 @@ import localFont from '@next/font/local';
 import { motion } from "framer-motion";
 import BarChartNomnieImage from "/public/assets/BarChartNomnie.png";
 import LineChartNomnieImage from "/public/assets/LineChartNomnie.png";
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { useState } from 'react';
 import { Calendar, CaretDown } from 'phosphor-react'
-import { Toggle } from '../../components/ToggleGroup'
+import { ChartIntervalToggle } from '../../components/ToggleGroup'
+import { ChartContainer, ChartModifiersContainer, ChartNavigation, ChartNavigationItem, ChartTopBar, LineChart } from '../../components/LineChart'
 
 const kobataBold = localFont({
   src: "../../../public/assets/fonts/Kobata-Bold.otf",
@@ -213,8 +214,6 @@ const monthlyImpressionsData = [
 
 const actualData =  {
     message: "success",
-    total_impressions: 208348,
-    unique_users: 145146,
     data: [
         {
             interval: "Jan",
@@ -285,20 +284,7 @@ const actualData =  {
 }
 
 
-const navItems = [
-    {
-        label: 'Page views',
-        metric: Intl.NumberFormat().format(actualData.total_impressions)
-    },
-    {
-        label: 'Visitors',
-        metric: Intl.NumberFormat().format(actualData.unique_users)
-    },
-    {
-        label: 'New Visitors',
-        metric: '46.2%'
-    }
-]
+
 
 function convertToMonth(dateString: string){
     const date = new Date(dateString);
@@ -315,60 +301,50 @@ const dataDict = [
     monthlyClickRateData
 ]
 
-export default function Home() {
-    const [selectedNavOption, setSelectedNavOption] = useState({label: 'Total impressions', index: 0})
+const navItems = [
+    {
+        label: 'Page views',
+        metric: Intl.NumberFormat().format(211485)
+    },
+    {
+        label: 'Visitors',
+        metric: Intl.NumberFormat().format(164485)
+    },
+    {
+        label: 'New Visitors',
+        metric: '46.2%'
+    }
+]
 
+export default function Home() {
+    const [selectedNavItem, setSelectedNavItem] = useState(0)
+    const [intervalValue, setIntervalValue] = useState('WEEK')
+    console.log(intervalValue)
     return (
-        <div className={styles.lineChart}>
-                <div className={styles.topBar}>
-                <div className={styles.chartNav}>
-                    { navItems.map((item, index) => (
-                        <div key={index} className={styles.chartNavButtonWrapper} >
-                            <div key={index} className={`${styles.chartNavButton} ${(selectedNavOption.label === item.label) && styles.chartNavButtonSelected}`} onClick={(e) => setSelectedNavOption({'label': item.label, 'index': index})}>
-                                <p className={styles.chartNavLabel}>{item.label}</p>
-                                <h2 className={styles.chartNavMetric}>{item.metric}</h2>
-                            </div>
-                                { ( selectedNavOption.label === item.label )? 
-                            <motion.div className={styles.chartNavButtonUnderline} layoutId="chartNavButtonUnderline"/> : null }
-                        </div>
-                        ))
-                    }
-                </div>
-                <div className={styles.modifiersContainer} >
-                    <button className={styles.dateTimeRangeButton}>
-                        <Calendar size={24} weight="fill" /> 17th January, 2022 — 16th January, 2023 <CaretDown weight="fill" size={16} />
-                    </button> 
-                    <button className={styles.dateTimeRangeButton}>
-                        Daily <CaretDown weight="fill" size={16} />
-                    </button>
-                    <Toggle />
-                </div>
-                </div>
-            <ResponsiveContainer width="100%" height={352}>
-                <AreaChart data={cleanData} margin={{ top: 48, right: 0, left: 0, bottom: 0 }}>
-                    <defs>
-                        <linearGradient id="colorthisYear" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#0091FF" stopOpacity={0.1}/>
-                            <stop offset="95%" stopColor="#0091FF" stopOpacity={0}/>
-                        </linearGradient>
-                        <linearGradient id="colorlastYear" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#8E4EC6" stopOpacity={0.1}/>
-                            <stop offset="95%" stopColor="#8E4EC6" stopOpacity={0}/>
-                        </linearGradient>
-                    </defs>
-                    <XAxis dataKey="interval" tickMargin={8} stroke="#D7DBDF" tick={{ fill: '#687076' }} style={{
-                        fontSize: '0.875em'
-                    }}/>
-                    {/*<YAxis tickMargin={8}  stroke="#D7DBDF" tick={{ fill: '#687076' }} style={{
-                        fontSize: '0.875em',
-                        marginRight: '1rem',
-                    }}/>*/}
-                    <CartesianGrid strokeDasharray="1 5" />
-                    <Tooltip />
-                    <Area type="monotone" dataKey="impressions" stroke="#006ADC" fillOpacity={1} fill="url(#colorthisYear)" strokeWidth="2"/>
-                    <Area type="monotone" dataKey="new_users" stroke="#8E4EC6" fillOpacity={1} fill="url(#colorlastYear)" strokeWidth="2" strokeDasharray="2 2" />
-                </AreaChart>
-            </ResponsiveContainer>
+        <div>
+            <ChartContainer>
+                <ChartTopBar>
+                    <ChartNavigation >
+                        { navItems.map((item, index) => (
+                            <ChartNavigationItem
+                                key={index}
+                                label={item.label}
+                                metric={item.metric}
+                                selected={(selectedNavItem === index)}
+                                onClick={() => setSelectedNavItem(index)} />
+                            ))
+                        }
+                    </ChartNavigation>
+                    <ChartModifiersContainer>
+                        <button className={styles.dateTimeRangeButton}><Calendar size={24} weight='fill' /> Last 7 days <CaretDown size={16} weight='bold' /></button>
+                        <ChartIntervalToggle ariaLabel={'interval picker'} type={'single'} defaultValue={'WEEK'} onClick={(e) => setIntervalValue(e.target.attributes.id.value)}/>
+                    </ChartModifiersContainer>
+                </ChartTopBar>
+                <LineChart
+                    data={cleanData}
+                    primaryColor={"#0091FF"} 
+                    secondaryColor={"#8E4EC6"} />
+            </ChartContainer>
         </div>
     )
 }
