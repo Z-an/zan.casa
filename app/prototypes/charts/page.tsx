@@ -23,7 +23,7 @@ const satoshiBold = localFont({
     weight: '700'
   });
 
-const monthlyImpressionsData = [
+const monthlythisPeriodData = [
     {
       name: 'Jan',
       thisYear: 4000,
@@ -217,68 +217,68 @@ const actualData =  {
     data: [
         {
             interval: "Jan",
-            impressions: 10057,
-            new_users: 7022
+            thisPeriod: 10057,
+            lastPeriod: 7022
         },
         {
             interval: "Dec",
-            impressions: 20641,
-            new_users: 14376
+            thisPeriod: 20641,
+            lastPeriod: 14376
         },
         {
             interval: "Nov",
-            impressions: 19709,
-            new_users: 13422
+            thisPeriod: 19709,
+            lastPeriod: 13422
         },
         {
             interval: "Oct",
-            impressions: 20301,
-            new_users: 13378
+            thisPeriod: 20301,
+            lastPeriod: 13378
         },
         {
             interval: "Sept",
-            impressions: 22380,
-            new_users: 14725
+            thisPeriod: 22380,
+            lastPeriod: 14725
         },
         {
             interval: "Aug",
-            impressions: 20242,
-            new_users: 14067
+            thisPeriod: 20242,
+            lastPeriod: 14067
         },
         {
             interval: "July",
-            impressions: 21560,
-            new_users: 14792
+            thisPeriod: 21560,
+            lastPeriod: 14792
         },
         {
             interval: "June",
-            impressions: 18838,
-            new_users: 13977
+            thisPeriod: 18838,
+            lastPeriod: 13977
         },
         {
             interval: "May",
-            impressions: 11593,
-            new_users: 8294
+            thisPeriod: 11593,
+            lastPeriod: 8294
         },
         {
             interval: "Apr",
-            impressions: 17132,
-            new_users: 12354
+            thisPeriod: 17132,
+            lastPeriod: 12354
         },
         {
             interval: "Mar",
-            impressions: 12451,
-            new_users: 8848
+            thisPeriod: 12451,
+            lastPeriod: 8848
         },
         {
             interval: "Feb",
-            impressions: 11408,
-            new_users: 8433
+            thisPeriod: 11408,
+            lastPeriod: 8433
         },
         {
             interval: "Jan",
-            impressions: 1442,
-            new_users: 1059
+            thisPeriod: 1442,
+            lastPeriod: 1059
         }
     ]
 }
@@ -296,7 +296,7 @@ const cleanData = actualData.data.reverse()
 
 
 const dataDict = [
-    monthlyImpressionsData,
+    monthlythisPeriodData,
     monthlyUsersData,
     monthlyClickRateData
 ]
@@ -304,45 +304,49 @@ const dataDict = [
 const navItems = [
     {
         label: 'Page views',
-        metric: Intl.NumberFormat().format(211485)
+        thisPeriodValue: Intl.NumberFormat().format(211485),
+        lastPeriodValue: Intl.NumberFormat().format(188903),
     },
     {
         label: 'Visitors',
-        metric: Intl.NumberFormat().format(164485)
+        thisPeriodValue: Intl.NumberFormat().format(164485),
+        lastPeriodValue: Intl.NumberFormat().format(16185),
     },
     {
         label: 'New Visitors',
-        metric: '46.2%'
+        thisPeriodValue: '46.2%',
+        lastPeriodValue: '62%',
     }
 ]
 
-export default function Home() {
+export default function Chart() {
     const [selectedNavItem, setSelectedNavItem] = useState(0)
     const [intervalValue, setIntervalValue] = useState('WEEK')
     console.log(intervalValue)
     return (
           <ChartContainer>
-              <ChartTopBar>
-                  <ChartNavigation >
-                      { navItems.map((item, index) => (
-                          <ChartNavigationItem
-                              key={index}
-                              label={item.label}
-                              metric={item.metric}
-                              selected={(selectedNavItem === index)}
-                              onClick={() => setSelectedNavItem(index)} />
-                          ))
-                      }
-                  </ChartNavigation>
-                  <ChartModifiersContainer>
-                      <button className={styles.dateTimeRangeButton}><Calendar size={24} weight='fill' /> Last 7 days <CaretDown size={16} weight='bold' /></button>
-                      <ChartIntervalToggle ariaLabel={'interval picker'} type={'single'} defaultValue={'WEEK'} onClick={(e) => console.log(e)}/>
-                  </ChartModifiersContainer>
+             <ChartTopBar>
+                <ChartNavigation >
+                    { navItems.map((item, index) => (
+                        <ChartNavigationItem
+                            key={index}
+                            label={item.label}
+                            thisPeriodValue={item.thisPeriodValue}
+                            lastPeriodValue={item.lastPeriodValue}
+                            selected={(selectedNavItem === index)}
+                            onClick={() => setSelectedNavItem(index)} />
+                        ))
+                    }
+                </ChartNavigation>
+                <ChartModifiersContainer>
+                    <button className={styles.dateTimeRangeButton}><Calendar size={24} weight='fill' /> Last 7 days <CaretDown size={16} weight='bold' /></button>
+                    <ChartIntervalToggle ariaLabel={'interval picker'} type={'single'} defaultValue={'WEEK'} onClick={(e) => console.log(e)}/>
+                </ChartModifiersContainer>
               </ChartTopBar>
               <LineChart
                   data={cleanData}
                   primaryColor={"#0091FF"} 
                   secondaryColor={"#8E4EC6"} />
           </ChartContainer>
-    )
+    ) 
 }

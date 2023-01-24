@@ -6,18 +6,18 @@
     border-radius: 1.5rem;
     overflow: hidden;
     margin: 1rem auto 2rem;
-    border: solid 1px var(--outline-opaque-soft);
+    border: solid 1px var(--gray8);
     box-shadow: var(--shadow-lg);
 }
 
 .divider {
     width: 100%;
-    border: solid 0.5px var(--outline-opaque-soft);
+    border: solid 0.5px var(--gray6);
     margin: 1rem 0;
 }
 
 .subHeading {
-    color: var(--text-low-contrast);
+    color: var(--gray11);
     margin-top: 0.5rem;
 }
 
@@ -35,22 +35,22 @@
     padding: 0.875rem 1.5rem 1rem;
     cursor: pointer;
     height: 100%;
-    background: #F8F9FA;
-    border-bottom: 1px solid #D7DBDF;
-    border-right: 1px solid #D7DBDF;
+    background: var(--elevation1);
+    border-bottom: 2px solid var(--gray6);
+    border-right: 2px solid var(--gray6);
 }
 
 .chartNavButton:hover {
-    background: #F1F3F5;
-    border-color: #D7DBDF;
+    background: var(--gray2);
+    border-color: var(--gray6);
 }
 
 .chartNavButtonSelected {
-    background: #FBFCFD;
+    background: var(--elevation3);
 }
 
 .chartNavButtonSelected:hover {
-    background: #FBFCFD;
+    background: var(--elevation1);
     cursor: default;
 }
 
@@ -66,13 +66,14 @@ button .chartNavButtonWrapper {
 }
 
 .chartNavButton:active {
-    background: #ECEEF0;
+    background: var(--gray4);
 }
 
 .chartNavButtonUnderline {
     height: 3px;
     width: 100%;
-    background: #11181C;
+    background: var(--gray12);
+    background: #2094FF;
     border-radius: 3rem;
     margin-top: -0.25rem;
 }
@@ -85,11 +86,40 @@ button .chartNavButtonWrapper {
 
 .chartNavMetric {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.trendBadge {
+    border-radius: 99rem;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    font-weight: 500;
+}
+
+.greenBadge {
+    color: #147D6F;
+    border: solid 1px #70E1C8;
+    background: #E1FBF4;
+}
+
+.redBadge {
+    background: #FFF0EE;
+    color: #CA3214;
+    border: solid 1px #E54D2E;
+}
+
+.metricContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }
 
 .chartContainer {
-    border: 1px solid #D7DBDF;
+    border: 2px solid var(--gray6);
     box-shadow: 0px 8px 24px -5px rgba(0, 0, 0, 0.09);
     border-radius: 1rem;
     padding-bottom: 2rem;
@@ -97,6 +127,10 @@ button .chartNavButtonWrapper {
     isolation: isolate;
     max-width: 75rem;
     margin: auto;
+}
+
+.chartContainer li {
+    font-size: 1rem;
 }
 
 .modifiersContainer {
@@ -129,7 +163,7 @@ button .chartNavButtonWrapper {
         justify-content: space-between;
         /*padding-left: 0.25rem;*/
         padding-bottom: 0.875rem;
-        border-bottom: solid 1px #D7DBDF;
+        border-bottom: solid 1px var(--gray6);;
     }
 }
 
@@ -140,7 +174,7 @@ button .chartNavButtonWrapper {
         justify-content: space-between;
         /*padding-left: 0.25rem;*/
         padding-bottom: 0.875rem;
-        border-bottom: solid 1px #D7DBDF;
+        border-bottom: solid 1px var(--gray6);
     }
     .chartNavLabel {
         font-size: 0.875rem;
@@ -151,12 +185,12 @@ button .chartNavButtonWrapper {
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    color: #687076;
+    color: var(--gray11);
     background: none;
     border-radius: 0.5rem;
     border: none;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: 1rem;
     width: fit-content;
     padding: 0.375rem 0.5rem;
     border: solid 1px transparent;
@@ -164,29 +198,29 @@ button .chartNavButtonWrapper {
 }
 
 .dateTimeRangeButton > svg {
-    color: #889096;
+    color: var(--gray9);
 }
 
 .dateTimeRangeButton:hover > svg {
-    color: #1A1523;
+    color: var(--gray12);
 }
 
 .dateTimeRangeButton:hover {
     /*background: #E6E8EB;*/
-    color: #1A1523;
+    color: var(--gray12);
     transition: 0.1s;
 }
 
 .dateTimeRangeButton:active {
-    background: #DFE3E6;
+    background: var(--gray1);
     transition: 0.1s;
 }
 
 .dateTimeRangeButton:focus {
     border-color: #2094FF;
-    background: #F1F3F5;
+    background: var(--gray1);
 }   
 
-.legendAlignRight {
-    text-align: right !important;
+.customTooltip {
+    background: #FFFFFF;
 }

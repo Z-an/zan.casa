@@ -24,6 +24,23 @@
       );
 
     --shadow-lg: 0px 24px 16px -16px rgba(0,0,0,0.18);
+
+    --gray1: #FBFCFD;
+    --gray2: #F8F9FA;
+    --gray3: #F1F3F5;
+    --gray4: #ECEEF0;
+    --gray5: #E6E8EB;
+    --gray6: #DFE3E6;
+    --gray7: #D7DBDF;
+    --gray8: #C1C8CD;
+    --gray9: #889096;
+    --gray10: #7E868C;
+    --gray11: #687076;
+    --gray12: #11181C;
+
+    --elevation-1: #F1F3F5;
+    --elevation-2: #F8F9FA;
+    --elevation-3: #FBFCFD;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +49,6 @@
         --text-high-contrast: hsl(240deg 6% 92%);
         --main-bg: hsl(228deg 4% 8%);
         --elevation-bg: #05050F;
-        --elevation-1: hsla(240, 7%, 14%, 1);
         --outline: hsl(240deg 6% 20%);
 
         --primary: #4200FF;
@@ -52,6 +68,24 @@
           );
     
         --shadow-lg: 0px 24px 16px -16px rgba(0,0,0,0.80);
+
+        --gray1: #161616;
+        --gray2: #1C1C1C;
+        --gray3: #232323;
+        --gray4: #282828;
+        --gray5: #2E2E2E;
+        --gray6: #343434;
+        --gray7: #3E3E3E;
+        --gray8: #505050;
+        --gray9: #707070;
+        --gray10: #7E7E7E;
+        --gray11: #A0A0A0;
+        --gray12: #EDEDED;
+
+        --elevation-1: #1C1C1C;
+        --elevation-2: #232323;
+        --elevation-3: #282828;
+
     }
 }
 
@@ -81,6 +115,24 @@
       );
 
     --shadow-lg: 0px 24px 16px -16px rgba(0,0,0,0.18);
+
+    --gray1: #FBFCFD;
+    --gray2: #F8F9FA;
+    --gray3: #F1F3F5;
+    --gray4: #ECEEF0;
+    --gray5: #E6E8EB;
+    --gray6: #DFE3E6;
+    --gray7: #D7DBDF;
+    --gray8: #C1C8CD;
+    --gray9: #889096;
+    --gray10: #7E868C;
+    --gray11: #687076;
+    --gray12: #11181C;
+
+    --elevation-1: #F1F3F5;
+    --elevation-2: #F8F9FA;
+    --elevation-3: #FBFCFD;
+
 }
 
 [data-theme="dark"] {
@@ -108,6 +160,23 @@
       );
 
     --shadow-lg: 0px 24px 16px -16px rgba(0,0,0,0.80);
+
+    --gray1: #161616;
+    --gray2: #1C1C1C;
+    --gray3: #232323;
+    --gray4: #282828;
+    --gray5: #2E2E2E;
+    --gray6: #343434;
+    --gray7: #3E3E3E;
+    --gray8: #505050;
+    --gray9: #707070;
+    --gray10: #7E7E7E;
+    --gray11: #A0A0A0;
+    --gray12: #EDEDED;
+
+    --elevation-1: #1C1C1C;
+    --elevation-2: #232323;
+    --elevation-3: #282828;
 }
 
 @font-face {
