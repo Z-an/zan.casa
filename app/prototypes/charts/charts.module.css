@@ -28,6 +28,11 @@
     margin-right: -0.425rem;
 }
 
+.flexDirectionRow {
+    display: flex;
+    flex-direction: row;
+}
+
 .chartNavButton {
     display: flex;
     gap: 0.25rem;
@@ -164,4 +169,12 @@
 
 .legendAlignRight {
     text-align: right !important;
+}
+
+.dataPageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 2rem;
+    margin-bottom: 4rem;    
 }

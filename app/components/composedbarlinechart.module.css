@@ -84,7 +84,7 @@
 .shinyBoxContainer {
     padding: 2px;
     overflow: hidden;
-    width: fit-content;
+    width: 8rem;
     height: 3.5rem;
     border-radius: 99rem;
     /*box-shadow: 0px 11px 8px -4px rgba(0,0,0,0.16);*/
@@ -119,38 +119,6 @@
     animation: rotate 0.5s infinite linear;
 }
 
-.errorBox {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(var(--gray3), var(--gray2));
-    color: var(--gray12);
-    display: flex;
-    align-items: center; justify-content: center;
-    border-radius: 99rem;
-    background-clip: padding-box; /* excludes border from background */
-    font-size: 1rem;
-    color: var(--error11);
-    padding: 1rem 1.5rem;
-    text-align: center;
-}
-
-.errorBox svg {
-    height: 2rem;
-    color: var(--error9);
-}
-
-.errorBox::before {
-    content: '';
-    position: absolute;
-    height: 800%;
-    width: 800%;
-    background: var(--error9);
-    z-index: -1;
-    animation: rotate 0.5s infinite linear;
-}
-
-
 
 .loadingContainer{
     display: flex;
@@ -158,11 +126,11 @@
     /*max-width: min(calc(100% - 4.26rem), 70.75rem);*/
     backdrop-filter: blur(4px);
     background: #FFFFFF01;
-    height: 352px;
+    height: 416px;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-bottom: -352px;
+    margin-bottom: -416px;
     z-index: 1;
 }
 
@@ -238,10 +206,6 @@ button .chartNavButtonWrapper {
 
 .chartNavButton:active {
     background: var(--elevation3);
-}
-
-.chartNavButtonFullWidth {
-    width: 100%;
 }
 
 .chartNavButtonUnderline {
@@ -412,32 +376,19 @@ button .chartNavButtonWrapper {
     }
 }
 
-.rechartsLegendStyle ul { 
+.recharts-default-legend { 
     font-size: 0.75rem !important;
     margin-left: 1rem;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
-
-.legendSquare {
-    width: 20px;
-    height: 12px;
-    border-radius: 4px;
+.greenBadge {
+    color: var(--success11);
+    border: solid 1px var(--success9);
+    background: var(--success3);
 }
 
-.legendLine {
-    height: 3px;
-    width: 20px;
-    border-radius: 4px;
+.redBadge {
+    background: var(--error3);
+    color: var(--error11);
+    border: solid 1px var(--error9);
 }
-
-.labelContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-}
-

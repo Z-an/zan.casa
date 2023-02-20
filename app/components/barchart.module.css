@@ -1,0 +1,160 @@
+.chartContainer {
+    border: 1px solid var(--gray7);
+    box-shadow: var(--shadow-lg);
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    max-width: 75rem;
+    margin: auto;
+    background: var(--elevation3);
+}
+
+.chartContainer li {
+    font-size: 1rem;
+}
+
+.leftHandSide {
+    width: 284px;
+}
+
+.shinyBoxContainer {
+    padding: 2px;
+    overflow: hidden;
+    width: 8rem;
+    height: 3.5rem;
+    border-radius: 99rem;
+    /*box-shadow: 0px 11px 8px -4px rgba(0,0,0,0.16);*/
+    isolation: isolate; /* required on Safari, as `overflow: hidden` does not impose border radius */
+    margin-top: -3rem;
+}
+
+.shinyBox {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(var(--gray3), var(--gray2));
+    color: var(--gray12);
+    display: flex;
+    align-items: center; justify-content: center;
+    border-radius: 99rem;
+    background-clip: padding-box; /* excludes border from background */
+    font-size: 1rem;
+}
+
+.shinyBox svg {
+    height: 2rem;
+}
+
+.shinyBox::before {
+    content: '';
+    position: absolute;
+    height: 800%;
+    width: 800%;
+    background: var(--shine-border);
+    z-index: -1;
+    animation: rotate 0.5s infinite linear;
+}
+
+
+.loadingContainer{
+    display: flex;
+    width: 100%;
+    /*max-width: min(calc(100% - 4.26rem), 70.75rem);*/
+    backdrop-filter: blur(4px);
+    background: #FFFFFF01;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: -140%;
+    z-index: 1;
+}
+
+
+.barChartContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 1rem;
+    max-width: 592px;
+}
+
+.rankedListRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.rankedListNumber {
+    background: var(--gray1);
+    border: solid 1px var(--gray7);
+    width: 1.75rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+}
+
+.rankedListRowTitle {
+    font-size: 1rem;
+    color: var(--gray12);
+    font-weight: 400;
+    width: 75%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+.rankedList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0375rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    border-right: solid 1px var(--gray7);
+}
+
+.verticalDivider {
+    background: var(--gray7);
+    width: 1px
+}
+
+.barChartNavigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.25rem;
+    border-bottom: solid 1px var(--gray7);
+    align-items: flex-end;
+}
+
+.barChartHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.pageNumberContainer {
+    font-size: 1rem;
+    color: var(--gray12);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.chartLabel strong {
+    font-weight: 400;
+    color: var(--gray12);
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}

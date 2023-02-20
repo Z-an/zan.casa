@@ -41,6 +41,14 @@
     --elevation-1: #F1F3F5;
     --elevation-2: #F8F9FA;
     --elevation-3: #FBFCFD;
+
+    --success11: #147D6F;
+    --success9: #70E1C8;
+    --success3: #E1FBF4;
+
+    --error11: #CA3214;
+    --error9: #E54D2E;
+    --error3: #FFF0EE;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -85,6 +93,14 @@
         --elevation-1: #1C1C1C;
         --elevation-2: #232323;
         --elevation-3: #282828;
+
+        --success11: #25D0AB;
+        --success9: #70E1C8;
+        --success3: #052926;
+    
+        --error11: #F16A50;
+        --error9: #E54D2E;
+        --error3: #3B1813;
 
     }
 }
@@ -177,6 +193,14 @@
     --elevation-1: #1C1C1C;
     --elevation-2: #232323;
     --elevation-3: #282828;
+
+    --success11: #25D0AB;
+    --success9: #70E1C8;
+    --success3: #052926;
+
+    --error11: #F16A50;
+    --error9: #E54D2E;
+    --error3: #3B1813;
 }
 
 @font-face {
